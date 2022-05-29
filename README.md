@@ -5,27 +5,20 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/filament-progress-column/Check%20&%20fix%20styling?label=code%20style)](https://github.com/ryangjchandler/filament-progress-column/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/ryangjchandler/filament-progress-column.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/filament-progress-column)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This package provides a `ProgessColumn` that can be used to display a progress bar in a Filament table.
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via Composer:
 
 ```bash
 composer require ryangjchandler/filament-progress-column
 ```
 
-You can publish and run the migrations with:
+If you're **not** using the `filament/admin` package, you should also add the following line to the top of your CSS:
 
-```bash
-php artisan vendor:publish --tag="filament-progress-column-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filament-progress-column-config"
+```css
+@import '../../vendor/ryangjchandler/filament-progress-column/resources/dist/progress.css'
 ```
 
 Optionally, you can publish the views using
@@ -34,18 +27,45 @@ Optionally, you can publish the views using
 php artisan vendor:publish --tag="filament-progress-column-views"
 ```
 
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 
+Add the `ProgressColumn` to your table:
+
 ```php
-$filament-progress-column = new RyanChandler\FilamentProgressColumn();
-echo $filament-progress-column->echoPhrase('Hello, RyanChandler!');
+use RyanChandler\FilamentProgressColumn\ProgressColumn;
+
+protected function getTableColumns(): array
+{
+    return [
+        ProgressColumn::make('progress'),
+    ];
+}
+```
+
+This will render a progress bar and used the value of `$record->progress` as the current progress. If you wish to calculate the progress dynamically, provide a `Closure` to the `ProgressColumn::progress()` method.
+
+```php
+protected function getTableColumns(): array
+{
+    return [
+        ProgressColumn::make('progress')
+            ->progress(function ($record) {
+                return ($record->rows_complete / $record->total_rows) * 100;
+            }),
+    ];
+}
+```
+
+By default, the progress bar will be the same as your `primary` color. If you wish to change this, provide a new string to `ProgressBar::color()`.
+
+```php
+protected function getTableColumns(): array
+{
+    return [
+        ProgressColumn::make('progress')
+            ->color('warning'),
+    ];
+}
 ```
 
 ## Testing
