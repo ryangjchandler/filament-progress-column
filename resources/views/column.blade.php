@@ -8,9 +8,15 @@ $color = match ($getColor()) {
 };
 
 $progress = $getProgress();
+$poll = $getPoll();
 @endphp
 
-<div class="filament-tables-progress-column">
+<div
+    class="filament-tables-progress-column"
+    @if($poll)
+        wire:poll.{{ $poll }}
+    @endif
+>
     <div class="flex items-center space-x-4 px-4">
         <div class="bg-gray-200 rounded-full h-2.5 dark:bg-gray-600 w-full">
             <div @class([
