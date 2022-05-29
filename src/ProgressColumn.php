@@ -34,7 +34,7 @@ class ProgressColumn extends Column
         return $this;
     }
 
-    public function getProgress(): int
+    public function getProgress(): int|float
     {
         if ($this->progress === null) {
             return floor($this->getStateFromRecord());
