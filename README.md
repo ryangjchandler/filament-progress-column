@@ -48,6 +48,8 @@ This will render a progress bar and used the value of `$record->progress` as the
     <img src="art/screenshot.jpeg">
 </p>
 
+### Dynamic progress calculation
+
 If you wish to calculate the progress dynamically, provide a `Closure` to the `ProgressColumn::progress()` method.
 
 ```php
@@ -61,6 +63,40 @@ protected function getTableColumns(): array
     ];
 }
 ```
+
+### Polling
+
+If you would like your progress bar to update after a period of time, call the `ProgressBar::poll()` method and provide a valid modifier string for the `wire:poll` directive.
+
+```php
+protected function getTableColumns(): array
+{
+    return [
+        ProgressColumn::make('progress')
+            ->poll('5s')
+    ];
+}
+```
+
+This will result in a `wire:poll.5s` directive being added to the column and the value of your progress bar will update every 5 seconds.
+
+#### Dynamic polling
+
+There might be scenarios where you only want to poll if some condition is met. This can be achieved by returning `?string` from a `Closure`.
+
+protected function getTableColumns(): array
+{
+    return [
+        ProgressColumn::make('progress')
+            ->poll(function ($record) {
+                return $record->progress < 100 ? '5s' : null;
+            })
+    ];
+}
+
+Now the progress bar will only be updated every 5 seconds **if** the progress is less than 100.
+
+### Colors
 
 By default, the progress bar will be the same as your `primary` color. If you wish to change this, provide a new string to `ProgressBar::color()`.
 
