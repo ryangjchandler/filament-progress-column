@@ -42,7 +42,13 @@ protected function getTableColumns(): array
 }
 ```
 
-This will render a progress bar and used the value of `$record->progress` as the current progress. If you wish to calculate the progress dynamically, provide a `Closure` to the `ProgressColumn::progress()` method.
+This will render a progress bar and used the value of `$record->progress` as the current progress.
+
+<p align="center">
+    <img src="art/screenshot.jpeg">
+</p>
+
+If you wish to calculate the progress dynamically, provide a `Closure` to the `ProgressColumn::progress()` method.
 
 ```php
 protected function getTableColumns(): array
