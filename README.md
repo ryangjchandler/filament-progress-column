@@ -84,6 +84,7 @@ This will result in a `wire:poll.5s` directive being added to the column and the
 
 There might be scenarios where you only want to poll if some condition is met. This can be achieved by returning `?string` from a `Closure`.
 
+```php
 protected function getTableColumns(): array
 {
     return [
@@ -93,6 +94,7 @@ protected function getTableColumns(): array
             })
     ];
 }
+```
 
 Now the progress bar will only be updated every 5 seconds **if** the progress is less than 100.
 
