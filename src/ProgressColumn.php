@@ -9,22 +9,22 @@ class ProgressColumn extends Column
 {
     protected string $view = 'filament-progress-column::column';
 
-    protected string $color = 'primary';
+    protected string | Closure $color = 'primary';
 
     protected ?Closure $progress = null;
 
     protected string | Closure | null $poll = null;
 
-    public function color(string $color): static
+    public function color(string | Closure $callback): static
     {
-        $this->color = $color;
+        $this->color = $callback;
 
         return $this;
     }
 
     public function getColor(): string
     {
-        return $this->color;
+        return $this->evaluate($this->color);
     }
 
     public function progress(Closure $callback): static
