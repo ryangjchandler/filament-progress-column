@@ -111,6 +111,20 @@ protected function getTableColumns(): array
     ];
 }
 ```
+### Dynamic color calculation
+
+If you wish to calculate the color dynamically, provide a `Closure` to the `ProgressColumn::progress()` method.
+
+```php
+protected function getTableColumns(): array
+{
+    return [
+        ProgressColumn::make('progress')->color(function ($record){
+            return $record->progress > 50 ? 'primary' : 'success';
+        })
+    ];
+}
+```
 
 ## Testing
 
