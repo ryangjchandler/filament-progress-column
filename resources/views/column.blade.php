@@ -1,11 +1,12 @@
 @php
-$color = match ($getColor()) {
+$evaluatedColor = $getColor();
+$color = match ($evaluatedColor) {
     'primary' => 'bg-primary-600',
     'secondary' => 'bg-secondary-600',
     'danger' => 'bg-danger-600',
     'success' => 'bg-success-600',
     'warning' => 'bg-warning-600',
-    default => $getColor()
+    default => $evaluatedColor
 };
 
 $progress = $getProgress();
