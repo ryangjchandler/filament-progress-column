@@ -2,6 +2,14 @@
 
 All notable changes to `filament-progress-column` will be documented in this file.
 
+## v0.3.1 - 2022-06-29
+
+### What's Changed
+
+- allow additional tailwind colors by @simonbuehler in https://github.com/ryangjchandler/filament-progress-column/pull/5
+
+**Full Changelog**: https://github.com/ryangjchandler/filament-progress-column/compare/v0.3.0...v0.3.1
+
 ## v0.3.0 - 2022-06-27
 
 ### What's Changed
