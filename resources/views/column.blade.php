@@ -5,6 +5,7 @@ $color = match ($getColor()) {
     'danger' => 'bg-danger-600',
     'success' => 'bg-success-600',
     'warning' => 'bg-warning-600',
+    default => $getColor()
 };
 
 $progress = $getProgress();

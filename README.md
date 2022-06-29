@@ -111,9 +111,22 @@ protected function getTableColumns(): array
     ];
 }
 ```
+
+With a [custom filament theme](https://filamentphp.com/docs/2.x/admin/appearance#building-themes) you can add `'./app/Filament/Resources/*.php'` to the `content` section in `tailwind.config.js` so colors won't get purged and create [gradient colors](https://tailwindcss.com/docs/gradient-color-stops#middle-color) like
+
+```php
+protected function getTableColumns(): array
+{
+    return [
+        ProgressColumn::make('progress')
+            ->color('bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'),
+    ];
+}
+```
+
 ### Dynamic color calculation
 
-If you wish to calculate the color dynamically, provide a `Closure` to the `ProgressColumn::progress()` method.
+If you wish to calculate the color dynamically, provide a `Closure` to the `ProgressColumn::color()` method.
 
 ```php
 protected function getTableColumns(): array
