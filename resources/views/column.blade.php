@@ -24,7 +24,7 @@ $poll = $getPoll();
             <div @class([
                 'h-2.5 rounded-full',
                 $color,
-            ]) style="width: {{ $progress }}%"></div>
+            ]) style="width: {{ $progress > 100 ? 100 : $progress }}%"></div>
         </div>
 
         <span class="text-sm text-gray-700 dark:text-gray-200">{{ $progress }}%</span>
