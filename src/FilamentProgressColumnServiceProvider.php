@@ -2,19 +2,25 @@
 
 namespace RyanChandler\FilamentProgressColumn;
 
-use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Filament\Support\Assets\Css;
+use Filament\Support\Facades\FilamentAsset;
 
-class FilamentProgressColumnServiceProvider extends PluginServiceProvider
+class FilamentProgressColumnServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-progress-column';
 
-    protected array $styles = [
-        'progress-column' => __DIR__ . '/../resources/dist/progress.css',
-    ];
-
-    public function packageConfigured(Package $package): void
+    public function configurePackage(Package $package): void
     {
-        $package->hasAssets();
+        $package->name(static::$name)
+            ->hasViews();
+    }
+
+    public function packageBooted(): void
+    {
+        FilamentAsset::register([
+            Css::make('filament-progress-column', __DIR__ . '/../resources/dist/progress.css')->loadedOnRequest(),
+        ], 'ryanchandler/filament-progress-column');
     }
 }
