@@ -2,10 +2,10 @@
 
 namespace RyanChandler\FilamentProgressColumn;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentProgressColumnServiceProvider extends PackageServiceProvider
 {
