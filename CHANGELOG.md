@@ -2,6 +2,10 @@
 
 All notable changes to `filament-progress-column` will be documented in this file.
 
+## v0.4.1 - 2023-12-04
+
+**Full Changelog**: https://github.com/ryangjchandler/filament-progress-column/compare/v0.4.0...v0.4.1
+
 ## v0.4.0 - 2023-12-04
 
 ### What's Changed
