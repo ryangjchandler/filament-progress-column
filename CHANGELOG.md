@@ -2,6 +2,21 @@
 
 All notable changes to `filament-progress-column` will be documented in this file.
 
+## v0.4.0 - 2023-12-04
+
+### What's Changed
+
+* build(deps): bump dependabot/fetch-metadata from 1.3.6 to 1.4.0 by @dependabot in https://github.com/ryangjchandler/filament-progress-column/pull/16
+* build(deps): bump dependabot/fetch-metadata from 1.4.0 to 1.5.1 by @dependabot in https://github.com/ryangjchandler/filament-progress-column/pull/17
+* build(deps): bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 by @dependabot in https://github.com/ryangjchandler/filament-progress-column/pull/19
+* Filament v3 Support by @Log1x in https://github.com/ryangjchandler/filament-progress-column/pull/20
+
+### New Contributors
+
+* @Log1x made their first contribution in https://github.com/ryangjchandler/filament-progress-column/pull/20
+
+**Full Changelog**: https://github.com/ryangjchandler/filament-progress-column/compare/v0.3.2...v0.4.0
+
 ## v0.3.2 - 2023-04-03
 
 ### What's Changed
