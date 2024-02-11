@@ -8,7 +8,10 @@ $color = match ($evaluatedColor) {
     'warning' => 'bg-warning-600',
     default => $evaluatedColor
 };
-
+$buttonStyles = \Filament\Support\get_color_css_variables(
+    $evaluatedColor,
+    shades: [600],
+);
 $progress = $getProgress();
 $poll = $getPoll();
 @endphp
@@ -19,10 +22,10 @@ $poll = $getPoll();
         wire:poll.{{ $poll }}
     @endif
 >
-    <div class="flex items-center space-x-4 px-4">
+    <div style="{{ $buttonStyles }}" class="flex items-center px-4 space-x-4">
         <div class="bg-gray-200 rounded-full h-2.5 dark:bg-gray-600 w-full">
             <div @class([
-                'h-2.5 rounded-full',
+                'h-2.5 rounded-full bg-custom-600',
                 $color,
             ]) style="width: {{ min($progress, 100) }}%"></div>
         </div>
