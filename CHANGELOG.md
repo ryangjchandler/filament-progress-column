@@ -2,6 +2,14 @@
 
 All notable changes to `filament-progress-column` will be documented in this file.
 
+## v1.0.1 - 2025-05-20
+
+### What's Changed
+
+* Laravel 12 support by @Sicklou in https://github.com/ryangjchandler/filament-progress-column/pull/31
+
+**Full Changelog**: https://github.com/ryangjchandler/filament-progress-column/compare/v1.0.0...v1.0.1
+
 ## v1.0.0 - 2024-03-25
 
 * Support for Laravel 11.
