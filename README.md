@@ -18,7 +18,7 @@ composer require ryangjchandler/filament-progress-column
 If you're **not** using the `filament/admin` package, you should also add the following line to the top of your CSS:
 
 ```css
-@import '../../vendor/ryangjchandler/filament-progress-column/resources/dist/progress.css'
+@import '../../vendor/ryangjchandler/filament-progress-column/resources/css/filament-progress-column.css'
 ```
 
 Optionally, you can publish the views using
