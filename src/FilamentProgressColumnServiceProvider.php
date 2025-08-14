@@ -20,7 +20,7 @@ class FilamentProgressColumnServiceProvider extends PackageServiceProvider
     public function packageBooted(): void
     {
         FilamentAsset::register([
-            Css::make('filament-progress-column', __DIR__ . '/../resources/dist/progress.css'),
+            Css::make('filament-progress-column', __DIR__ . '/../resources/css/filament-progress-column.css'),
         ], 'ryanchandler/filament-progress-column');
     }
 }
