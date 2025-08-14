@@ -23,7 +23,8 @@
     }
 
     .fi-ta-progress-label {
-        width: calc(var(--spacing) * 10);
+        min-width: calc(var(--spacing) * 10);
+        text-align: right;
         font-size: var(--text-sm);
         color: var(--color-gray-950);
 
