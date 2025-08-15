@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  },
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./resources/css/progress.css -o ./resources/dist/progress.css --minify"
+  }
+}
