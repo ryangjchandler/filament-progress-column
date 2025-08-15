@@ -1,8 +1,8 @@
 # Add a progress bar column to your Filament tables.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ryangjchandler/filament-progress-column.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/filament-progress-column)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/filament-progress-column/run-tests?label=tests)](https://github.com/ryangjchandler/filament-progress-column/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/filament-progress-column/Check%20&%20fix%20styling?label=code%20style)](https://github.com/ryangjchandler/filament-progress-column/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ryangjchandler/filament-progress-column/run-tests.yml?branch=main&label=tests)](https://github.com/ryangjchandler/filament-progress-column/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ryangjchandler/filament-progress-column/php-cs-fixer.yml?branch=main&label=code%20style)](https://github.com/ryangjchandler/filament-progress-column/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/ryangjchandler/filament-progress-column.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/filament-progress-column)
 
 This package provides a `ProgessColumn` that can be used to display a progress bar in a Filament table.
