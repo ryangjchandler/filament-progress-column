@@ -1,0 +1,21 @@
+@reference "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.fi-ta-progress-col {
+    @apply flex items-center gap-4 w-full px-4;
+
+    .fi-ta-progress-track {
+        @apply h-2.5 w-full bg-gray-200 rounded-full dark:bg-gray-600;
+
+        .fi-ta-progress-indicator {
+            @apply h-2.5 rounded-full;
+
+            background-color: var(--color-600);
+        }
+    }
+
+    .fi-ta-progress-label {
+        @apply min-w-10 text-right text-sm text-gray-950 dark:text-white;
+    }
+}
