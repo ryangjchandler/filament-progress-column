@@ -2,6 +2,18 @@
 
 All notable changes to `filament-progress-column` will be documented in this file.
 
+## v2.0.0 - 2025-08-15
+
+### What's Changed
+
+* Filament v4 support by @johanmolen in https://github.com/ryangjchandler/filament-progress-column/pull/33
+
+### New Contributors
+
+* @johanmolen made their first contribution in https://github.com/ryangjchandler/filament-progress-column/pull/33
+
+**Full Changelog**: https://github.com/ryangjchandler/filament-progress-column/compare/v1.0.1...v2.0.0
+
 ## v1.0.1 - 2025-05-20
 
 ### What's Changed
