@@ -2,6 +2,20 @@
 
 All notable changes to `filament-progress-column` will be documented in this file.
 
+## v2.1.0 - 2026-05-05
+
+### What's Changed
+
+* Laravel 13  by @JonPurvis in https://github.com/ryangjchandler/filament-progress-column/pull/36
+* Allow Filament v5 by @blazerunner44 in https://github.com/ryangjchandler/filament-progress-column/pull/35
+
+### New Contributors
+
+* @JonPurvis made their first contribution in https://github.com/ryangjchandler/filament-progress-column/pull/36
+* @blazerunner44 made their first contribution in https://github.com/ryangjchandler/filament-progress-column/pull/35
+
+**Full Changelog**: https://github.com/ryangjchandler/filament-progress-column/compare/v2.0.0...v2.1.0
+
 ## v2.0.0 - 2025-08-15
 
 ### What's Changed
